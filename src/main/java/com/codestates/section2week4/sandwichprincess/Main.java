@@ -7,6 +7,7 @@ import com.codestates.section2week4.sandwichprincess.order.Order;
 import com.codestates.section2week4.sandwichprincess.order.OrderApp;
 import com.codestates.section2week4.sandwichprincess.product.Menu;
 import com.codestates.section2week4.sandwichprincess.product.ProductRepository;
+import org.springframework.beans.factory.config.BeanDefinition;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
@@ -33,6 +34,18 @@ public class Main {
         Menu menu = applicationContext.getBean("menu", Menu.class);
         Cart cart = applicationContext.getBean("cart", Cart.class);
         Order order = applicationContext.getBean("order", Order.class);
+
+        // 2023.6.6(화) 23h30
+        String[] beanDefinitionNames = applicationContext.getBeanDefinitionNames();
+        for (String beanDefinitionName : beanDefinitionNames) {
+            // Spring 컨테이너가 관리하는 모든 Beans 조회 = Spring Framework가 내부적으로 사용하는 Beans + 내가 만든/등록한 Beans
+//            Object bean = applicationContext.getBean(beanDefinitionName);
+//            System.out.println("beanName = " + beanDefinitionName + ", object = " + bean);
+
+            // Beans 메타정보 조회
+            BeanDefinition beanDefinition = applicationContext.getBeanDefinitionNames(b);
+
+        }
 
         // 불러온 Bean 사용 =
         OrderApp orderApp = new OrderApp(
