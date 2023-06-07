@@ -43,11 +43,13 @@ public class Main {
 //            System.out.println("beanName = " + beanDefinitionName + ", object = " + bean);
 
             // Beans 메타정보 조회
-            BeanDefinition beanDefinition = applicationContext.getBeanDefinitionNames(b);
-
+//            BeanDefinition beanDefinition = applicationContext.getBeanDefinition(beanDefinitionName);
+//            if (beanDefinition.getRole() == BeanDefinition.ROLE_APPLICATION) {
+//                System.out.println("beanDefinitionName = " + beanDefinitionName + ", beanDefinition = " + beanDefinition);
+//            }
         }
 
-        // 불러온 Bean 사용 =
+        // Spring 컨테이너 관리 하의 빈 객체들을 불러옴 -> 불러온 Bean 사용 = 의존성 주입 사용해서 해당 객체의 참조 값을 OrderApp 객체에 전달하여 프로그램 실행
         OrderApp orderApp = new OrderApp(
                 productRepository,
                 menu,
