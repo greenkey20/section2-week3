@@ -12,7 +12,8 @@ import org.springframework.context.annotation.Configuration;
 public class ClientConfig {
 
     // Spring 컨테이너에 TestClient Bean 객체를 수동으로 등록
-    @Bean
+    // destroyMethod 속성은 default 값이 추론되는 것 -> 라이브러리 등에서 빈번하게 사용되는 close(), shutdown() 등의 이름의 메서드를 자동으로 호출
+    @Bean(initMethod = "init"/*, destroyMethod = "close"*/)
     public TestClient testClient() {
         TestClient testClient = new TestClient("www.swprincess.com");
         return testClient;

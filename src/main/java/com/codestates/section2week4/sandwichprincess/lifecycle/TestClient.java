@@ -8,7 +8,7 @@ import org.springframework.beans.factory.InitializingBean;
 /**
  * 생성자로 받은 url 주소를 연결
  */
-public class TestClient implements InitializingBean, DisposableBean {
+public class TestClient /*implements InitializingBean, DisposableBean*/ {
     private String url;
 
     public TestClient(String url) {
@@ -16,17 +16,35 @@ public class TestClient implements InitializingBean, DisposableBean {
         this.url = url;
     }
 
-    @Override
-    public void afterPropertiesSet() throws Exception {
-        System.out.println("초기화 메서드 실행");
+    /**
+     * Spring 컨테이너 초기화 과정에허 호출되는 메서드
+     *
+     * @throws Exception
+     */
+//    @Override
+//    public void afterPropertiesSet() throws Exception {
+//        System.out.println("초기화 메서드 실행");
+//    }
+    // 2023.6.8(목) 0h5
+    public void init() {
+        System.out.println("초기화 메서드 init() 실행");
     }
 
     public void connect() {
         System.out.println("클라이언트를 " + url + "로 연결");
     }
 
-    @Override
-    public void destroy() throws Exception {
-        System.out.println("종료 메서드 실행");
+    /**
+     * Spring 컨테이너 종료 시 호출되는 메서드
+     *
+     * @throws Exception
+     */
+//    @Override
+//    public void destroy() throws Exception {
+//        System.out.println("종료 메서드 실행");
+//    }
+    // 2023.6.8(목) 0h5
+    public void close() {
+        System.out.println("종료 메서드 close() 실행");
     }
 }
