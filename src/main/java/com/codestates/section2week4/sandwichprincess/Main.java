@@ -7,7 +7,6 @@ import com.codestates.section2week4.sandwichprincess.order.Order;
 import com.codestates.section2week4.sandwichprincess.order.OrderApp;
 import com.codestates.section2week4.sandwichprincess.product.Menu;
 import com.codestates.section2week4.sandwichprincess.product.ProductRepository;
-import org.springframework.beans.factory.config.BeanDefinition;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
@@ -24,7 +23,8 @@ public class Main {
         );
          */
 
-        // Spring 컨테이너 생성 <- 클래스 구성 정보를 매개변수로 받음
+        // Spring 컨테이너 생성 및 초기화 <- 클래스 구성 정보를 매개변수로 받음
+        // close() 메서드 사용하려면 AnnotationConfigApplicationContext 자료형으로 객체 생성해야 함
         ApplicationContext applicationContext = new AnnotationConfigApplicationContext(AppConfigurer.class);
 
         // Spring 컨테이너는 클래스 구성 정보를 바탕으로 Bean 객체들 생성 + 객체들 간의 의존 관계 연결 = Spring 설정 작업
@@ -58,5 +58,8 @@ public class Main {
         );
 
         orderApp.view();
+
+        // 2023.6.7(수) 23h30 Spring 컨테이너 종료
+//        applicationContext.close();
     }
 }
