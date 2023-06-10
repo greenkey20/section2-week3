@@ -1,6 +1,6 @@
 package com.codestates.section2week3.scope.singleton;
 
-import com.codestates.section2week4.sandwichprincess.common.AppConfigurer;
+import com.codestates.section2week4.sandwichprincess.common.TestConfigurer;
 import com.codestates.section2week4.sandwichprincess.product.ProductRepository;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -20,7 +20,7 @@ public class AppConfigurerSingletonTest {
     void runWithSingletonInAppConfigurer() {
         // given
         // Spring 컨테이너 생성
-        ApplicationContext applicationContext = new AnnotationConfigApplicationContext(AppConfigurer.class);
+        ApplicationContext applicationContext = new AnnotationConfigApplicationContext(TestConfigurer.class);
 
         // when
         ProductRepository productRepository1 = applicationContext.getBean("productRepository", ProductRepository.class);

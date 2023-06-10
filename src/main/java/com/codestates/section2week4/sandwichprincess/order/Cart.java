@@ -7,6 +7,7 @@ import com.codestates.section2week4.sandwichprincess.product.subproduct.Drink;
 import com.codestates.section2week4.sandwichprincess.product.subproduct.Sandwich;
 import com.codestates.section2week4.sandwichprincess.product.subproduct.SandwichSet;
 import com.codestates.section2week4.sandwichprincess.product.subproduct.Side;
+import org.springframework.stereotype.Component;
 
 import java.util.Scanner;
 
@@ -14,6 +15,7 @@ import static com.codestates.section2week4.sandwichprincess.common.Utils.printLi
 
 
 // 2023.5.12(금) 22h10
+@Component
 public class Cart {
     private Product[] cartItems = new Product[0];
 

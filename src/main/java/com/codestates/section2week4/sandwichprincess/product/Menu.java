@@ -3,10 +3,12 @@ package com.codestates.section2week4.sandwichprincess.product;
 import com.codestates.section2week4.sandwichprincess.product.subproduct.Drink;
 import com.codestates.section2week4.sandwichprincess.product.subproduct.Sandwich;
 import com.codestates.section2week4.sandwichprincess.product.subproduct.Side;
+import org.springframework.stereotype.Component;
 
 import static com.codestates.section2week4.sandwichprincess.common.Utils.printLine;
 
 // 2023.5.11(목) 23h20
+@Component
 public class Menu {
     private Product[] PRODUCTS;
 

@@ -24,6 +24,7 @@ import org.springframework.context.annotation.Configuration;
  * 이 AppConfigurer는 Spring 컨테이너의 관리를 받음
  * Spring 컨테이너가 관리하는 Java 객체 = Spring Bean
  */
+/*
 @Configuration // Spring 컨테이너 만들어질 때 이 클래스를 구성 정보로 사용
 public class AppConfigurer {
     // 2023.5.16(화) 12h Singleton 패턴 vs 2023.5.22(월) 0h20 Spring 컨테이너가 기본적으로 싱글톤으로 Bean 객체들을 관리해줌
@@ -39,7 +40,7 @@ public class AppConfigurer {
         return new ProductRepository();
     }
 
-    @Bean/*(name = "cart2")*/ // 필요에 따라 bean 이름을 다르게 설정 가능
+    @Bean(name = "cart2") // 필요에 따라 bean 이름을 다르게 설정 가능
     public Cart cart() {
         return new Cart(productRepository(), menu());
 //        return cart;
@@ -59,3 +60,4 @@ public class AppConfigurer {
         });
     }
 }
+*/

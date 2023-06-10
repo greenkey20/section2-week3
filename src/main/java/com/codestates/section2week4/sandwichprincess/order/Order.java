@@ -1,15 +1,19 @@
 package com.codestates.section2week4.sandwichprincess.order;
 
 import com.codestates.section2week4.sandwichprincess.discount.Discount;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import static com.codestates.section2week4.sandwichprincess.common.Utils.printLine;
 
 // 2023.5.15(월) 23h15
+@Component //
 public class Order {
     private Cart cart;
     //    private DiscountCondition[] discountConditions;
     private Discount discount;
 
+    @Autowired // 생성자에 붙임 -> Spring이 관리하고 있는 해당 타입의 객체가 자동으로 주입되어 의존 관계 완성됨 vs 생성자가 단 하나만 존재하는 경우에는 생략해도 자동으로 의존 관계 연결됨
     public Order(Cart cart, Discount discount) {
         this.cart = cart;
         this.discount = discount;
