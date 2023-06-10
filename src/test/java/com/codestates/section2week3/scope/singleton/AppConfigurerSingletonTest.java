@@ -1,4 +1,4 @@
-package com.codestates.section2week3.singleton;
+package com.codestates.section2week3.scope.singleton;
 
 import com.codestates.section2week4.sandwichprincess.common.AppConfigurer;
 import com.codestates.section2week4.sandwichprincess.product.ProductRepository;
