@@ -17,7 +17,7 @@ public class StudentDiscountCondition implements DiscountCondition {
     private DiscountPolicy discountPolicy; // 직접 객체 생성x = 어떤 객체 사용할지 직접 결정x = 특정 필요한 역할을 수행하는 객체를 생성자를 통해 외부로부터 주입받아 사용 = 역할에 의존 = 인터페이스에 의존 = 구체적인 구현 객체는 자유롭게 교체될 수 있음 -> oop는 변화와 확장에 유연
 
     // 생성자 주입을 통한 의존성 주입
-    public StudentDiscountCondition(@Qualifier("fixedRate") DiscountPolicy discountPolicy) {
+    public StudentDiscountCondition(DiscountPolicy discountPolicy) {
         this.discountPolicy = discountPolicy;
     }
 
