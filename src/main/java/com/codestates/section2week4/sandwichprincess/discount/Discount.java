@@ -14,13 +14,13 @@ public class Discount {
     private DiscountCondition[] discountConditions;
 
     // 2023.6.10(토) 19h AppConfigurer에서의 구현 내용처럼 새로운 생성자 추가
-    @Autowired
-    public Discount() {
-        this.discountConditions = new DiscountCondition[]{
-                new StudentDiscountCondition(new FixedRateDiscountPolicy(10.0)),
-                new YouthDiscountCondition(new FixedAmountDiscountPolicy(500))
-        };
-    }
+//    @Autowired
+//    public Discount() {
+//        this.discountConditions = new DiscountCondition[]{
+//                new StudentDiscountCondition(new FixedRateDiscountPolicy(10.0)),
+//                new YouthDiscountCondition(new FixedAmountDiscountPolicy(500))
+//        };
+//    }
 
     public Discount(DiscountCondition[] discountConditions) {
         this.discountConditions = discountConditions;
