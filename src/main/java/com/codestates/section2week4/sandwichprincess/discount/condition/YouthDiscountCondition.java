@@ -1,7 +1,7 @@
 package com.codestates.section2week4.sandwichprincess.discount.condition;
 
 import com.codestates.section2week4.sandwichprincess.discount.policy.DiscountPolicy;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 import java.util.Scanner;
@@ -12,12 +12,12 @@ public class YouthDiscountCondition implements DiscountCondition {
     private boolean isSatisfied;
     //    private FixedAmountDiscountPolicy fixedAmountDiscountPolicy = new FixedAmountDiscountPolicy(500); // 직접 객체 생성해서 사용 = 직접적으로 의존
     // 2023.6.11(일) 23h30
-    @Autowired
-    private DiscountPolicy fixedAmountDiscountPolicy;
+//    @Autowired
+    private DiscountPolicy discountPolicy;
 
-//    public YouthDiscountCondition(DiscountPolicy discountPolicy) {
-//        this.fixedAmountDiscountPolicy = discountPolicy;
-//    }
+    public YouthDiscountCondition(@Qualifier("fixedAmount") DiscountPolicy discountPolicy) {
+        this.discountPolicy = discountPolicy;
+    }
 
     @Override
     public boolean isSatisfied() {
@@ -38,6 +38,6 @@ public class YouthDiscountCondition implements DiscountCondition {
 
     @Override
     public int applyDiscount(int price) {
-        return fixedAmountDiscountPolicy.calculateDiscountedPrice(price);
+        return discountPolicy.calculateDiscountedPrice(price);
     }
 }

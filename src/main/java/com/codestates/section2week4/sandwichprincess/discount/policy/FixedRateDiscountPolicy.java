@@ -1,9 +1,11 @@
 package com.codestates.section2week4.sandwichprincess.discount.policy;
 
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 // 2023.5.16(화) 0h15
 @Component
+@Qualifier("fixedRate")
 public class FixedRateDiscountPolicy implements DiscountPolicy {
     private double discountRate;
 
