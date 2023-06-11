@@ -15,9 +15,9 @@ public class YouthDiscountCondition implements DiscountCondition {
     @Autowired
     private DiscountPolicy fixedAmountDiscountPolicy;
 
-    public YouthDiscountCondition(DiscountPolicy discountPolicy) {
-        this.fixedAmountDiscountPolicy = discountPolicy;
-    }
+//    public YouthDiscountCondition(DiscountPolicy discountPolicy) {
+//        this.fixedAmountDiscountPolicy = discountPolicy;
+//    }
 
     @Override
     public boolean isSatisfied() {

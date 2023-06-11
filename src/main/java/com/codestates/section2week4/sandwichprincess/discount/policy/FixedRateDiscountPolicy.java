@@ -7,6 +7,10 @@ import org.springframework.stereotype.Component;
 public class FixedRateDiscountPolicy implements DiscountPolicy {
     private double discountRate;
 
+    // 2023.6.12(월) 0h5
+    public FixedRateDiscountPolicy() {
+    }
+
     public FixedRateDiscountPolicy(double discountRate) {
         this.discountRate = discountRate;
     }
