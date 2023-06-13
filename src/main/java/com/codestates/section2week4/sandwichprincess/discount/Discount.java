@@ -9,7 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 // 2023.5.16(화) 10h50 객체의 자율성 높이기
-@Component // 이 어노테이션이 붙은 클래스들은 ComponentScan에 의해 스캔됨 -> 자동으로 Spring 컨테이너가 이 클래스의 인스턴스를 생성해서 Spring Bean으로 등록/관리
+@Component // 이 애너테이션이 붙은 클래스들은 ComponentScan에 의해 스캔됨 -> 자동으로 Spring 컨테이너가 이 클래스의 인스턴스를 생성해서 Spring Bean으로 등록/관리
 public class Discount {
     private DiscountCondition[] discountConditions;
 
