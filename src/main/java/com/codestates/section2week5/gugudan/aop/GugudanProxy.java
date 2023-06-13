@@ -1,6 +1,7 @@
-package com.codestates.section2week5.gugudan;
+package com.codestates.section2week5.gugudan.aop;
 
 import com.codestates.section2week4.sandwichprincess.common.Utils;
+import com.codestates.section2week5.gugudan.bizlogic.Gugudan;
 
 // 2023.6.13(화) 23h50
 

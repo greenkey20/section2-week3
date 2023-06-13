@@ -1,6 +1,4 @@
-package com.codestates.section2week5.gugudan;
-
-import com.codestates.section2week4.sandwichprincess.common.Utils;
+package com.codestates.section2week5.gugudan.bizlogic;
 
 // 2023.6.12(월) 1h
 public class GugudanByRecursion implements Gugudan {

@@ -1,4 +1,4 @@
-package com.codestates.section2week5.gugudan;
+package com.codestates.section2week5.gugudan.bizlogic;
 
 // 2023.6.12(월) 0h50
 public class GugudanAlgorithms {
