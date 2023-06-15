@@ -2,6 +2,8 @@ package com.codestates.section2week4.sandwichprincess.order;
 
 import com.codestates.section2week4.sandwichprincess.product.Menu;
 import com.codestates.section2week4.sandwichprincess.product.ProductRepository;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.Scanner;
 
@@ -19,6 +21,9 @@ public class OrderApp {
         this.cart = cart;
         this.order = order;
     }
+
+    // 2023.6.16(금) 1h35 aop 적용 = logging 기능
+    private static final Logger log = LoggerFactory.getLogger(OrderApp.class);
 
     public void view() {
         Scanner scanner = new Scanner(System.in);
@@ -41,6 +46,10 @@ public class OrderApp {
         */
 
         System.out.println("== 🥪 SandwichPrincess order service ==");
+
+        // 2023.6.16(금) 1h35 aop 적용 = logging 기능
+        String hello = "샌드위치 프린세스에 오신 것을 환영합니다!";
+        log.info("첫 인사 = {}", hello); // 01:38:52.407 [main] INFO com.codestates.section2week4.sandwichprincess.order.OrderApp - 첫 인사 = 샌드위치 프린세스에 오신 것을 환영합니다!
 
         while (true) {
             // 메뉴 출력
