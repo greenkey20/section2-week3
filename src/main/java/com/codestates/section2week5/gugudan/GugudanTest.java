@@ -32,5 +32,8 @@ public class GugudanTest {
 
         Gugudan gugudan = applicationContext.getBean("gugudan", Gugudan.class);
         gugudan.calculate(level, count);
+        // 2023.6.15(목) 12h45 동일한 방법으로 메서드 2번 더 호출
+        gugudan.calculate(level, count);
+        gugudan.calculate(level, count);
     }
 }
